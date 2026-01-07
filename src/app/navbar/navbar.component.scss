@@ -1,0 +1,228 @@
+/* navbar */
+.nav-bar-container {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+}
+
+/* navbar .content */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.logo-container {
+    width: 20%;
+    display: flex;
+    align-items: flex-start;
+    margin: 5px 15px 5px 15px;
+}
+
+.image {
+    width: 200px;
+    height: auto;
+    margin: 5px 0px;
+}
+
+.title {
+    font-size: 20px;
+    // font-weight: bold;
+    color: white;
+    justify-content: flex-start;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+/* buttons */
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+
+    width: 50%;
+    margin: 5px 15px 5px 15px;
+
+}
+
+.menu-button {
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    height: auto;
+    width: auto;
+}
+
+.search-container {
+    width: 40%;
+}
+
+.option-content {
+    display: flex;
+    align-items: center;
+}
+
+.ticker {
+    display: inline-block;
+    width: 65px;
+    font-weight: 600;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.company-name {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* button animations */
+.button {
+    /* remove default button styling */
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+    font-size: 15px;
+    color: white;
+    display: inline-block;
+    position: relative;
+}
+
+.button::after {
+    margin-bottom: -3px;
+    content: '';
+    text-decoration: none;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: transform 0.25s ease-out;
+}
+
+.button:hover::after {
+    transform: scaleX(1);
+}
+
+.button.underline-animation::after {
+    transform-origin: bottom right;
+}
+
+.button.underline-animation:hover::after {
+    transform-origin: bottom left;
+}
+
+
+.search-button {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+}
+
+
+
+/* medium window */
+@media only screen and (min-width: 670px) and (max-width: 1100px) {
+    .mat-sidenav-container {
+        background-size: auto 100vh;
+    }
+
+    .nav-bar-container {
+        padding: 10px 15px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo-container {
+        margin: 0px;
+        width: auto;
+    }
+
+    .image {
+        width: 150px;
+        height: auto;
+    }
+
+    .search-container {
+        width: 65%;
+    }
+
+    /* buttons */
+    .buttons {
+        display: none;
+    }
+
+    .search-button {
+        display: none;
+    }
+
+    .menu-button {
+        font-size: 30px;
+        display: block;
+    }
+}
+
+/* smallest window */
+@media only screen and (max-width: 670px) {
+    .mat-sidenav-container {
+        background-size: auto 100vh;
+    }
+
+    .nav-bar-container {
+        padding: 5px 15px;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 80%;
+        margin: 0px;
+    }
+
+    .image {
+        width: 150px;
+        height: auto;
+        margin: 5px 0px 5px 0px;
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    /* buttons */
+    .buttons {
+        display: none;
+    }
+
+    .search-button {
+        font-size: 25px;
+        display: block;
+    }
+
+    /* menu button */
+    .menu-button {
+        font-size: 25px;
+        display: block;
+    }
+
+}

@@ -1,0 +1,24 @@
+<div class="nav-bar-container">
+    <div class="content">
+        <div class="logo-container">
+            <a [routerLink]="['/homepage']"><img class="image" src="assets/logos/market_apex_logo.png"></a>
+        </div>
+
+        <div class="buttons">
+            <!-- <a class="button underline-animation" [routerLink]="['/about-options-article']"> What are Options?</a> -->
+            <!-- <a class="button underline-animation" [routerLink]="['/options-pricing-blog']"> Options Pricing</a> -->
+            <a class="button underline-animation" [routerLink]="['/homepage']"> Market Overview</a>
+            <a class="button underline-animation" [routerLink]="['/homepage']"> Earnings Calendar</a>
+            <a class="button underline-animation" [routerLink]="['/homepage']">Articles</a> <!-- [matMenuTriggerFor]="beforeMenu" -->
+            <!-- <mat-menu #beforeMenu="matMenu" xPosition="before">
+                <a mat-menu-item [routerLink]="['/about-options-blog']">What are Options?</a>
+                <a mat-menu-item [routerLink]="['/about-options-part-two-blog']">What are Options? (pt. 2)</a>
+                <a mat-menu-item [routerLink]="['/options-pricing-blog']">Options Pricing</a>
+            </mat-menu> -->
+        </div>
+
+        <mat-icon class="menu-button" id="animate" style="--index: 5;" aria-hidden="false"
+            aria-label="Example home icon" fontIcon="menu" (click)="onMenuClick()" [class.open]="isOpen">
+        </mat-icon>
+    </div>
+</div>
