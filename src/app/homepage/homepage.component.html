@@ -1,3 +1,21 @@
-<h1>test</h1>
-<p>homepage works!</p>
+<div class="nav-bar-container">
+    <app-navbar></app-navbar>
+</div>
 
+<!-- All scrollable page content -->
+<div class="homepage-container">
+    <div class="landing">
+    </div>
+
+    <mat-icon class="top-of-page-button" #backToTopButton aria-hidden="false"  fontIcon="expand_less" (click)="ScrollToTop()" matTooltip="Back to top"></mat-icon>
+
+    <div class="main-content">
+        <!-- <app-about-me id="about-me"></app-about-me>
+        <app-timeline id="experiences"></app-timeline>
+        <app-filler></app-filler>
+        <app-service id="services"></app-service>
+        <app-contact-form id="lets-talk"></app-contact-form> -->
+        <app-footer></app-footer>
+    </div>
+    
+</div>
