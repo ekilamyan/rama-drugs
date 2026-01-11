@@ -1,0 +1,383 @@
+section {
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px 30px;
+}
+
+.main-container {
+    // display: flex;
+    margin: auto;
+    width: 1200px;
+}
+
+
+/* heading */
+.heading {
+    flex: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.heading h1 {
+    font-family: 'D-DIN';
+    color: black;
+    font-size: 35px;
+    margin: 0px 0px 40px 0px;
+}
+
+.heading h2 {
+    font-family: 'D-DIN';
+    margin: 10px;
+}
+
+
+/* service */
+.services-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;
+    width: 30%;
+}
+
+.service-title {
+    color: black;
+    font-size: 30px;
+    font-family: 'D-DIN';
+    margin: 20px 0px 20px 0px;
+}
+
+.service {
+    width: 100%;
+    min-height: 500px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    position: relative;
+    /* required for ::before layering */
+    overflow: hidden;
+}
+
+.service h2 {
+    width: 60%;
+    font-family: 'D-DIN Bold';
+    font-weight: bold;
+    font-size: 30px;
+    /* z-index: 1; */
+    transition: transform 0.6s ease;
+    transform: translateY(40px);
+}
+
+.service::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0);
+    transition: background-color 0.3s ease;
+    z-index: 0;
+}
+
+.service:hover::before {
+    background-color: rgba(29, 29, 29, 0.439);
+}
+
+
+
+/* hidden element */
+.hidden-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+    text-align: center;
+}
+
+
+.service h2,
+.service .hidden-element {
+    position: relative;
+    z-index: 1;
+}
+
+.service:hover .hidden-element {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.action-button {
+    /* remove default button styling */
+    margin: 20px 0px 10px 0px;
+    width: 45%;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.action-button:hover {
+    color: black;
+    background-color: white;
+    transition: 0.3s;
+}
+
+
+.info {
+    text-align: left;
+}
+
+hr {
+    margin: 25px 0px 25px 0px;
+}
+
+
+
+
+
+/* Learn More Buttons */
+.buttons {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-button {
+    color: #f4812f;
+    cursor: pointer;
+    font-size: 30px;
+    height: auto;
+    width: auto;
+}
+
+/* button animations */
+.button {
+    /* remove default button styling */
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: inherit;
+
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    color: #f4812f;
+    display: inline-block;
+    position: relative;
+}
+
+.button::after {
+    margin-bottom: -3px;
+    content: '';
+    text-decoration: none;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f4812f;
+    transition: transform 0.25s ease-out;
+}
+
+.button:hover::after {
+    transform: scaleX(1);
+}
+
+.button.left::after {
+    transform-origin: bottom right;
+}
+
+.button.left:hover::after {
+    transform-origin: bottom left;
+}
+
+
+// /* Top-right corner */
+// .service-card::before {
+//   content: "";
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   width: 30px;
+//   height: 30px;
+//   border-top: 2px solid #f4812f;
+//   border-right: 2px solid #f4812f;
+// }
+
+// /* Bottom-left corner */
+// .service-card::after {
+//   content: "";
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   width: 30px;
+//   height: 30px;
+//   border-bottom: 2px solid #f4812f;
+//   border-left: 2px solid #f4812f;
+// }
+
+
+/* medium window
+@media only screen and (min-width: 670px) and (max-width: 1100px) {
+    .services-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin: 40px 0px 40px 0px;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+
+    .additional-services-container {
+        flex-direction: column;
+    }
+
+    .additional-services-container .service-card {
+        width: 100%;
+        margin: 30px 0px 30px 0px;
+    }
+} */
+
+/* smallest window */
+@media only screen and (max-width: 1100px) {
+
+    /* heading */
+    .heading {
+        padding: 0px;
+    }
+
+    .heading h1 {
+        font-size: 25px;
+    }
+
+    .heading p {
+        font-size: 13px;
+    }
+
+    /* services */
+    .services-container {
+        flex-direction: column;
+    }
+
+    .hidden-element {
+        display: none;
+    }
+
+    .card {
+        width: 100%;
+        margin: 40px 0px 40px 0px;
+    }
+
+    .service {
+        min-height: 400px;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .info h2 {
+        font-size: 22px;
+    }
+
+    .info p {
+        font-size: 13px;
+    }
+
+    .button {
+        /* remove default button styling */
+        font-size: 13px;
+    }
+
+    /* additional-services */
+    .additional-services-container {
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .additional-services-container .service-card {
+        width: 100%;
+        margin: 30px 0px 30px 0px;
+    }
+
+    .additional-services-container .service-card {
+        height: 250px;
+    }
+
+    .additional-services-container h2 {
+        font-size: 22px;
+    }
+
+    .additional-services-container p {
+        font-size: 13px;
+    }
+
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.slide-in {
+    animation: slideIn 0.6s ease-out forwards;
+    animation-delay: calc(0.15s * (var(--index) + 1));
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

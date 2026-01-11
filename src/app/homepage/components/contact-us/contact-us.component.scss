@@ -1,0 +1,172 @@
+.contact-methods-section {
+    color: white;
+    background-color: #f4812f;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px 30px;
+}
+
+.main-container {
+    // display: flex;
+    margin: auto;
+    width: 1200px;
+}
+
+
+/* additional services */
+.additional-services-container {
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    // margin: 20px 0px 40px 0px;
+
+    p {
+        color: white;
+        font-size: 16px;
+    }
+}
+
+.service-content {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 30px;
+
+    height: 200px;
+    width: 360px;
+
+
+    mat-icon {
+        height: 50px;
+        width: auto;
+        font-size: 50px;
+        color: white;
+    }
+
+    .additional-service-title {
+        color: white;
+        font-size: 20px;
+        font-family: 'D-DIN';
+        font-weight: bold;
+        margin: 10px 0px 10px 0px;
+    }
+
+    p {
+        width: 90%;
+        // height: 80px;
+        margin: auto;
+        font-size: 14px;
+    }
+}
+
+
+.service-card {
+    position: relative;
+    height: auto;
+    width: 30%;
+    // padding: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+
+.service-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(48, 48, 48, 0.45);
+    /* adjust opacity here */
+    z-index: 1;
+}
+
+.service-card .service-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+section {
+    background-color: white;
+    padding: 100px 30px;
+}
+
+.main-container {
+    width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    color: black;
+    font-size: 35px;
+    margin: 0px 0px 40px 0px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+// Map
+.map {
+    width: 60%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+// Contact Info
+.contact-information {
+    width: 40%;
+}
+
+.contacts-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .data-point {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        mat-icon {
+            color: #F4812F;
+        }
+    }
+}
+
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .names {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        // gap: 10px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,90 @@
+section {
+    color: black;
+    background-color: rgb(242, 242, 242);
+    padding: 100px 30px 30px 30px;
+}
+
+.main-container {
+    width: 1400px;
+    height: auto;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+}
+
+/* heading */
+.heading {
+    flex: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    // padding: 50px 0px 50px 0px;
+}
+
+.heading h1 {
+    font-family: 'D-DIN';
+    font-size: 50px;
+    margin: 0px;
+}
+
+h2 {
+    font-family: 'D-DIN';
+    font-size: 30px;
+    margin: 0px;
+}
+
+p {
+    margin: 0px;
+    color: rgb(140, 140, 140);
+    font-size: 18px;
+    text-align: center;
+    width: 500px;
+}
+
+// insurances
+.insurances-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.insurance {
+    height: 50px;
+    width: auto;
+}
+
+
+// disclaimer
+.disclaimer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.slide-in {
+    animation: slideIn 0.6s ease-out forwards;
+    animation-delay: calc(0.15s * (var(--index) + 1));
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

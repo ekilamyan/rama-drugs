@@ -14,9 +14,9 @@
 
 .landing {
     height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.115), rgba(0, 0, 0, 0.115)), url(https://tbcdn.talentbrew.com/company/1242/cms/tech1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.115), rgba(0, 0, 0, 0.115)), url(https://www.outcomes.com/hubfs/2023_Redesign/photography/787391-computer-1311515380.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -40,7 +40,7 @@ app-footer {
     width: 40px;
 
     background-color: white;
-    color: black;
+    color: #f4812f;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-size: 30px;
     cursor: pointer;
@@ -49,7 +49,7 @@ app-footer {
 
 .top-of-page-button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: black;
+    background-color: #f4812f;
     color: white;
     transition: 0.3s;
 }

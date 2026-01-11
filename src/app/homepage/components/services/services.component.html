@@ -1,0 +1,57 @@
+<section>
+    <div class="main-container">
+        <div class="heading">
+            <h1>OUR SERVICES</h1>
+        </div>
+
+
+        <div class="subsection">
+            <!-- <h2>ADDITIONAL SERVICES</h2> -->
+            <!-- <hr> -->
+        </div>
+
+
+        <div class="services-container">
+            @for (service of services; track service; let i = $index;) {
+            <div class="card animate-on-scroll" [style.--index]="i">
+                <div class="service" [style.background-image]="'url(' + service.thumbnailPhoto + ')'">
+                    <div class="hidden-element">
+                        <a class="action-button"> LEARN MORE</a>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <h2 class="service-title">{{ service.title }}</h2>
+                    <p>{{ service.shortDescription }}</p>
+                    <a class="button left"> LEARN MORE</a>
+                </div>
+            </div>
+            }
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- <section>
+    <div class="main-container">        
+        <div class="heading">
+            <h1>OUR SERVICES</h1>
+        </div>
+        
+        <div class="services-container">
+            @for (service of additionalServices; track service; let i = $index;) {
+            <div class="service-card animate-on-scroll" [style.--index]="i"
+                [style.background-image]="'url(' + service.thumbnailPhoto + ')'">
+                <div class="overlay"></div>
+                <div class="service-content">
+                    <h2 class="title">{{ service.title }}</h2>
+                    <p>{{ service.shortDescription }}</p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section> -->
