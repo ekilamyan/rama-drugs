@@ -31,19 +31,19 @@ body {
   //     ),
   //     typography: Inter, sans-serif density: 0));
 
-  // @include mat.form-field-overrides((container-height: 2.2rem,
-  //     container-vertical-padding: 0.5rem,
-  //     container-text-size: 13px,
-  //     outlined-container-shape: 5px,
-  //     outlined-outline-color: rgba(105, 105, 105, 0.3),
-  //     outlined-input-text-color: white,
-  //     outlined-label-text-color: white,
-  //     outlined-hover-outline-color: rgb(153, 153, 153),
-  //     outlined-hover-label-text-color: white,
-  //     outlined-label-text-size: 13px,
-  //     outlined-focus-outline-width: 0.5px,
-  //     outlined-focus-outline-color: white,
-  //   ));
+  @include mat.form-field-overrides((container-height: 2.2rem,
+      container-vertical-padding: 0.5rem,
+      container-text-size: 13px,
+      outlined-container-shape: 5px,
+      outlined-outline-color: rgba(105, 105, 105, 0.3),
+      outlined-input-text-color: black,
+      outlined-label-text-color: black,
+      outlined-hover-outline-color: rgb(153, 153, 153),
+      outlined-hover-label-text-color: black,
+      outlined-label-text-size: 13px,
+      outlined-focus-outline-width: 0.5px,
+      outlined-focus-outline-color: black,
+    ));
 
   // // @include mat.menu-overrides((container-color: rgba(0, 0, 0, 0),
   // //   ));
@@ -130,9 +130,9 @@ a {
 //   // -webkit-backdrop-filter: blur(60px);
 // }
 
-// .mat-mdc-form-field-subscript-wrapper {
-//   height: 0px;
-// }
+.mat-mdc-form-field-subscript-wrapper {
+  height: 0px;
+}
 
 // .mat-mdc-form-field-icon-suffix {
 //   background-color: transparent;

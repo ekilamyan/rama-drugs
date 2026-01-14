@@ -34,7 +34,6 @@
     </div>
 </section>
 
-
 <section>
     <div class="main-container">
         <div class="heading">
@@ -75,31 +74,53 @@
 
                 <form class="contact-form" [formGroup]="contactForm">
                     <div class="names">
-                        <mat-form-field appearance="outline">
-                            <mat-label>First Name</mat-label>
-                            <input matInput formControlName="name" placeholder="Enter your First Name" type="text">
-                        </mat-form-field>
+                        <div class="form-field">
+                            <span class="label">First Name</span>
+                            <mat-form-field appearance="outline">
+                                <mat-label>First Name</mat-label>
+                                <input matInput formControlName="name" placeholder="Enter your First Name" type="text">
+                            </mat-form-field>
+                        </div>
 
+                        <div class="form-field">
+                            <span class="label">Last Name</span>
+                            <mat-form-field appearance="outline">
+                                <span class="label"></span>
+                                <mat-label>Last Name</mat-label>
+                                <input matInput formControlName="lastName" placeholder="Enter your Last Name"
+                                    type="text">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <span class="label">Email</span>
                         <mat-form-field appearance="outline">
-                            <mat-label>Last Name</mat-label>
-                            <input matInput formControlName="lastName" placeholder="Enter your First Name" type="text">
+                            <mat-label>Email</mat-label>
+                            <input matInput formControlName="email" placeholder="Enter Your Email" type="text">
                         </mat-form-field>
                     </div>
 
-                    <mat-form-field appearance="outline">
-                        <mat-label>Email</mat-label>
-                        <input matInput formControlName="email" placeholder="Enter your First Name" type="text">
-                    </mat-form-field>
+                    <div class="form-field">
+                        <span class="label">Subject</span>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Subject</mat-label>
+                            <input matInput formControlName="subject" placeholder="Enter Subject" type="text">
+                        </mat-form-field>
+                    </div>
 
-                    <mat-form-field appearance="outline">
-                        <mat-label>Subject</mat-label>
-                        <input matInput formControlName="subject" placeholder="Enter your First Name" type="text">
-                    </mat-form-field>
+                    <div class="form-field">
+                        <span class="label">Message</span>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Message</mat-label>
+                            <textarea matInput formControlName="message" placeholder="Enter your First Name"
+                                type="text"></textarea>
+                        </mat-form-field>
+                    </div>
 
-                    <mat-form-field appearance="outline">
-                        <mat-label>Message</mat-label>
-                        <input matInput formControlName="message" placeholder="Enter your First Name" type="text">
-                    </mat-form-field>
+
+
+                    <button>Submit</button>
                 </form>
             </div>
         </div>
