@@ -12,13 +12,53 @@
     width: 100%;
 }
 
+/* old */
+// .landing {
+//     height: 100vh;
+//     background-image: linear-gradient(rgba(0, 0, 0, 0.115), rgba(0, 0, 0, 0.115)), url('/assets/background.JPG');
+//     background-repeat: no-repeat;
+//     background-position: center center;
+//     background-size: cover;
+//     background-attachment: fixed;
+// }
+
+/* New Stuff */
 .landing {
+    position: relative;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.115), rgba(0, 0, 0, 0.115)), url(https://www.outcomes.com/hubfs/2023_Redesign/photography/787391-computer-1311515380.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    overflow: hidden;
 }
+
+/* Fullscreen background video */
+.landing-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%) scaleX(-1);
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Optional dark overlay (keeps text readable) */
+.landing-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+/* Your actual content */
+.landing-content {
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+}
+
+/* New Stuff */
 
 
 app-footer {

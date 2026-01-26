@@ -1,7 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Service } from '../../../shared/models/service';
-import { InformationService } from '../../../shared/services/information.service';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
@@ -16,13 +15,9 @@ export class ServicesComponent {
   public services: Service[] = [];
   public additionalServices: Service[] = [];
 
-  constructor(
-    private informationService: InformationService,
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.services = this.informationService.getAllServicesData();
-    this.additionalServices = this.informationService.getAllAdditionalServicesData();
   }
 
   ngAfterViewInit(): void {

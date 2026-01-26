@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AboutUsComponent } from './about-us.component';
+import { StripPackagingComponent } from './strip-packaging.component';
 
-describe('AboutUsComponent', () => {
-  let component: AboutUsComponent;
-  let fixture: ComponentFixture<AboutUsComponent>;
+describe('StripPackagingComponent', () => {
+  let component: StripPackagingComponent;
+  let fixture: ComponentFixture<StripPackagingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AboutUsComponent]
+      imports: [StripPackagingComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(AboutUsComponent);
+    fixture = TestBed.createComponent(StripPackagingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIcon } from "@angular/material/icon";
+import { FooterComponent } from '../footer/footer.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 @Component({
   selector: 'app-contact-us',
@@ -10,7 +12,9 @@ import { MatIcon } from "@angular/material/icon";
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatIcon
+    MatIcon,
+    FooterComponent,
+    MatTabsModule
 ],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.scss'

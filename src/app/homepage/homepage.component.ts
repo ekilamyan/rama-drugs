@@ -1,31 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { MatIcon } from '@angular/material/icon';
 import { FooterComponent } from '../footer/footer.component';
 import { ServicesComponent } from './components/services/services.component';
-import { AcceptedInsurancesComponent } from "./components/accepted-insurances/accepted-insurances.component";
 import { IntroComponent } from './components/intro/intro.component';
-import { ContactUsComponent } from "./components/contact-us/contact-us.component";
-import { AdditionalServicesComponent } from "./components/additional-services/additional-services.component";
+import { ContactUsComponent } from "../contact-us/contact-us.component";
+import { StripPackagingComponent } from './components/strip-packaging/strip-packaging.component';
+import { LongTermCareComponent } from './components/long-term-care/long-term-care.component';
+import { TeamComponent } from './components/team/team.component';
 
 @Component({
   selector: 'app-homepage',
   imports: [
+    StripPackagingComponent,
+    LongTermCareComponent,
+    TeamComponent,
     FooterComponent,
     MatIcon,
     NavbarComponent,
     ServicesComponent,
-    AcceptedInsurancesComponent,
     IntroComponent,
     ContactUsComponent,
-    AdditionalServicesComponent
-],
+  ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
 })
 export class HomepageComponent {
-  constructor() {}
-  
+  constructor() { }
+
+
+  @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;
+
+  ngAfterViewInit() {
+    const video = this.bgVideo.nativeElement;
+    video.muted = true;
+    video.play().catch(() => {
+      // Autoplay was blocked — browser policy
+    });
+  }
+
   ScrollToTop(): void {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }

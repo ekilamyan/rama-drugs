@@ -4,24 +4,39 @@
 
 <!-- All scrollable page content -->
 <div class="homepage-container">
-    <div class="landing">
+
+    <!-- old -->
+    <!-- <div class="landing">
         <app-intro></app-intro>
+    </div> -->
+
+    <!-- New -->
+    <div class="landing">
+        <video #bgVideo class="landing-video" autoplay muted loop playsinline>
+            <source src="/assets/background.mp4" type="video/mp4" />
+        </video>
+
+        <div class="landing-overlay"></div>
+
+        <div class="landing-content">
+            <app-intro></app-intro>
+        </div>
     </div>
 
-    <mat-icon class="top-of-page-button" #backToTopButton aria-hidden="false"  fontIcon="expand_less" (click)="ScrollToTop()" matTooltip="Back to top"></mat-icon>
+
+
+    <mat-icon class="top-of-page-button" #backToTopButton aria-hidden="false" fontIcon="expand_less"
+        (click)="ScrollToTop()" matTooltip="Back to top"></mat-icon>
 
     <div class="main-content">
-        <app-additional-services></app-additional-services>
+        <app-strip-packaging></app-strip-packaging>
+        <app-long-term-care></app-long-term-care>
         <app-services id="services"></app-services>
-        <app-accepted-insurances id="accepted-insurances"></app-accepted-insurances>
-        <app-contact-us></app-contact-us>
-        <!-- <app-about-me id="about-me"></app-about-me>
-        <app-timeline id="experiences"></app-timeline>
-        <app-filler></app-filler>
-        <app-contact-form id="lets-talk"></app-contact-form> -->
+        <app-team></app-team>
         <app-footer></app-footer>
     </div>
-    
+
 </div>
+
 <!-- landing page idea -->
 <!-- https://dribbble.com/shots/25100822-Pelmatech-Online-Health-Platform -->

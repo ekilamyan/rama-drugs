@@ -1,0 +1,362 @@
+.contact-us-container {
+    width: 100%;
+    background-color: #fff9f1;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 1200px;
+    margin: auto;
+    padding: 150px 0px;
+}
+
+.title {
+    font-size: 55px;
+    font-weight: 500;
+    margin: 0px;
+    color: #b06028;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0px;
+    color: #48270f;
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 50px 0px;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 48%;
+    }
+
+    .contact-information {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+.contact-methods {
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    gap: 20px
+}
+
+.data-point {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    mat-icon {
+        height: 20px;
+        width: 20px;
+        font-size: 20px;
+        color: #F4812F;
+        margin: 4px 0px;
+    }
+
+    .text {
+        width: 50%;
+        font-size: 1 6px;
+        line-height: 1.7;
+        margin: 0px;
+        color: #48270f;
+    }
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+
+    .names {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .name-form-field {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .label {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .submit-button {
+        all: unset;
+
+        width: 99%;
+        padding: 10px 0px;
+
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+
+        color: #eb7d32;
+        border: 2px solid #eb7d32;
+        border-radius: 2px;
+
+        cursor: pointer;
+
+        /* Smooth animations */
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease,
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .submit-button:hover {
+        background-color: #eb7d32;
+        color: white;
+        box-shadow: 0 6px 12px rgba(235, 125, 50, 0.3);
+    }
+}
+
+
+/* Locations */
+
+.locations {
+    padding: 50px 0px;
+    width: 100%;
+}
+
+.locations-title {
+    width: 100%;
+    font-size: 55px;
+    font-weight: 500;
+    margin: 0px;
+    color: #b06028;
+    text-align: right;
+}
+
+.location-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+    border: 2px solid #eb7d32;
+}
+
+img {
+    width: 100%;
+}
+
+.address {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    mat-icon {
+        height: 20px;
+        width: 20px;
+        font-size: 20px;
+        color: #F4812F;
+        margin: 4px 0px;
+    }
+
+    .text {
+        width: 100%;
+        font-size: 1 6px;
+        line-height: 1.7;
+        margin: 0px;
+        color: #48270f;
+    }
+}
+
+.get-directions-button {
+    all: unset;
+
+    width: 150px;
+    padding: 10px;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+
+    color: #eb7d32;
+    border: 2px solid #eb7d32;
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    /* Smooth animations */
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.get-directions-button:hover {
+    background-color: #eb7d32;
+    color: white;
+    box-shadow: 0 6px 12px rgba(235, 125, 50, 0.3);
+}
+
+
+
+// .content-container {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     gap: 10px;
+// }
+
+
+// /* locations */
+// .locations {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// img {
+//     height: auto;
+//     width: 80%;
+// }
+
+// // Contact Info
+// .contact-information {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 40px;
+//     width: 40%;
+// }
+
+
+
+
+
+
+
+
+// .contact-methods-section {
+//     color: white;
+//     background-color: #f4812f;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 20px;
+//     padding: 100px 30px;
+// }
+
+// .main-container {
+//     // display: flex;
+//     margin: auto;
+//     width: 1200px;
+// }
+
+
+// /* additional services */
+// .additional-services-container {
+//     display: flex;
+//     flex: row;
+//     justify-content: space-between;
+//     // margin: 20px 0px 40px 0px;
+
+//     p {
+//         color: white;
+//         font-size: 16px;
+//     }
+// }
+
+// .service-content {
+//     border: 1px solid white;
+//     border-radius: 5px;
+//     padding: 30px;
+
+//     height: 200px;
+//     width: 360px;
+
+
+//     mat-icon {
+//         height: 50px;
+//         width: auto;
+//         font-size: 50px;
+//         color: white;
+//     }
+
+//     .additional-service-title {
+//         color: white;
+//         font-size: 20px;
+//         font-family: 'D-DIN';
+//         font-weight: bold;
+//         margin: 10px 0px 10px 0px;
+//     }
+
+//     p {
+//         width: 90%;
+//         // height: 80px;
+//         margin: auto;
+//         font-size: 14px;
+//     }
+// }
+
+
+// // .service-card {
+// //     position: relative;
+// //     height: auto;
+// //     width: 30%;
+// //     // padding: 25px;
+// //     background-size: cover;
+// //     background-repeat: no-repeat;
+// //     background-position: center center;
+// //     display: flex;
+// //     align-items: center;
+// //     justify-content: center;
+// //     color: white;
+// //     overflow: hidden;
+// // }
+
+// // .service-card .overlay {
+// //     position: absolute;
+// //     top: 0;
+// //     left: 0;
+// //     right: 0;
+// //     bottom: 0;
+// //     background-color: rgba(48, 48, 48, 0.45);
+// //     /* adjust opacity here */
+// //     z-index: 1;
+// // }
+
+// // .service-card .service-content {
+// //     position: relative;
+// //     z-index: 2;
+// //     text-align: center;
+// // }

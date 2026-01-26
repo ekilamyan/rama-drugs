@@ -1,57 +1,63 @@
-<section>
-    <div class="main-container">
-        <div class="heading">
-            <h1>OUR SERVICES</h1>
+<div class="services-container">
+    <div class="content">
+        <div class="services-description-container">
+            <h1 class="title">All The Service You Will Get</h1>
+            <p class="description">It's important to address your health conditions during medications for the best
+                substance.</p>
+            <button class="learn-more-button">Contact Us</button>
         </div>
 
-
-        <div class="subsection">
-            <!-- <h2>ADDITIONAL SERVICES</h2> -->
-            <!-- <hr> -->
-        </div>
-
-
-        <div class="services-container">
-            @for (service of services; track service; let i = $index;) {
-            <div class="card animate-on-scroll" [style.--index]="i">
-                <div class="service" [style.background-image]="'url(' + service.thumbnailPhoto + ')'">
-                    <div class="hidden-element">
-                        <a class="action-button"> LEARN MORE</a>
-                    </div>
-                </div>
-
-                <div class="info">
-                    <h2 class="service-title">{{ service.title }}</h2>
-                    <p>{{ service.shortDescription }}</p>
-                    <a class="button left"> LEARN MORE</a>
-                </div>
+        <div class="service-card animate-on-scroll" [style.--index]="1">
+            <div class="service-content">
+                <mat-icon fontIcon="cached"></mat-icon>
+                <h2 class="additional-service-title">REQUEST REFILL</h2>
+                <p>Let us know if you need a prescription refilled and we will take care of the rest.</p>
             </div>
-            }
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- <section>
-    <div class="main-container">        
-        <div class="heading">
-            <h1>OUR SERVICES</h1>
-        </div>
         
-        <div class="services-container">
-            @for (service of additionalServices; track service; let i = $index;) {
-            <div class="service-card animate-on-scroll" [style.--index]="i"
-                [style.background-image]="'url(' + service.thumbnailPhoto + ')'">
-                <div class="overlay"></div>
-                <div class="service-content">
-                    <h2 class="title">{{ service.title }}</h2>
-                    <p>{{ service.shortDescription }}</p>
-                </div>
-            </div>
-            }
+            <button class="learn-more-button">Request</button>
         </div>
+
+        <div class="service-card animate-on-scroll" [style.--index]="2">
+            <div class="service-content">
+                <mat-icon fontIcon="compare_arrows"></mat-icon>
+                <h2 class="additional-service-title">TRANSFER RX</h2>
+                <p>Transfer a prescription from your old pharmacy to RaMa Drugs. All we need is the pharmacy and prescription info.</p>
+            </div>
+
+            <button class="learn-more-button">Transfer</button>
+        </div>
+
+        <div class="service-card animate-on-scroll" [style.--index]="0">
+            <div class="service-content">
+                <mat-icon fontIcon="local_shipping"></mat-icon>
+                <h2 class="additional-service-title">FREE DELIVERY</h2>
+                <p>RaMa Drugs will deliver your prescriptions to your doorstep at no extra charge!.</p>
+            </div>
+
+            <button class="learn-more-button">Contact Us</button>
+        </div>
+
+        <div class="service-card animate-on-scroll" [style.--index]="1">
+            <div class="service-content">
+                <mat-icon fontIcon="health_and_safety"></mat-icon>
+                <h2 class="additional-service-title">ALL OVER-THE-COUNTER NEEDS</h2>
+                <p>Antacids, Antiemetics, Antihistamines, Cough Suppressants, Decongestants, Pain Relievers,
+                    Vitamins And
+                    more...</p>
+            </div>
+
+            <button class="learn-more-button">Contact Us</button>
+        </div>
+
+        <div class="service-card animate-on-scroll" [style.--index]="2">
+            <div class="service-content">
+                <mat-icon fontIcon="call"></mat-icon>
+                <h2 class="additional-service-title">ON-CALL PHARMACISTS</h2>
+                <p>RaMa Drugs has dedicated pharmacists on call to answer your questions 24/7</p>
+            </div>
+
+            <button class="learn-more-button">Contact Us</button>
+        </div>
+
     </div>
-</section> -->
+</div>
