@@ -34,54 +34,27 @@ export class NavbarComponent {
     this.renderer.setStyle(navBar, 'box-shadow', 'none');
   }
 
+  isScrolled = false;
+
   @HostListener('window:scroll', [])
-  onWindowScroll(): void {
-    const currentScrollTop = Math.max(0, window.pageYOffset || this.document.documentElement.scrollTop);
-    const navBar = this.el.nativeElement.querySelector('.nav-bar-container');
-
-    // --- Force navbar to show at top ---
-    if (currentScrollTop <= 0) {
-      this.renderer.setStyle(navBar, 'transform', 'translateY(0)');
-      this.isNavbarVisible = true;
-
-      // Transparent styling when at top
-      this.renderer.setStyle(navBar, 'background-color', 'transparent');
-      this.renderer.setStyle(navBar, 'backdrop-filter', 'none');
-      this.renderer.setStyle(navBar, 'box-shadow', 'none');
-      this.renderer.setStyle(navBar, 'transition', 'all 0.3s ease');
-
-      this.previousScrollTop = 0;
-      return; // stop further logic
-    }
-
-    // --- Styling changes after top ---
-    if (currentScrollTop < 100) {
-      this.renderer.setStyle(navBar, 'background-color', 'transparent');
-      this.renderer.setStyle(navBar, 'backdrop-filter', 'none');
-      this.renderer.setStyle(navBar, 'box-shadow', 'none');
-    } else {
-      this.renderer.setStyle(navBar, 'backdrop-filter', 'blur(15px)');
-      this.renderer.setStyle(navBar, 'background-color', 'rgba(33, 33, 33, 0.522)');
-      this.renderer.setStyle(navBar, 'box-shadow', '0px 25px 50px -38px #000000');
-    }
-    this.renderer.setStyle(navBar, 'transition', 'all 0.3s ease');
-
-    // --- Detect scroll direction ---
-    const delta = currentScrollTop - this.previousScrollTop;
-    if (Math.abs(delta) > this.scrollThreshold) {
-      if (delta > 0 && this.isNavbarVisible) {
-        // Scrolling down → hide
-        this.renderer.setStyle(navBar, 'transform', 'translateY(-100%)');
-        this.isNavbarVisible = false;
-      } else if (delta < 0 && !this.isNavbarVisible) {
-        // Scrolling up → show
-        this.renderer.setStyle(navBar, 'transform', 'translateY(0)');
-        this.isNavbarVisible = true;
-      }
-    }
-
-    this.previousScrollTop = currentScrollTop;
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
   }
+
+  // @HostListener('window:scroll', [])
+  // onWindowScroll(): void {
+  //   const scrollTop =
+  //     window.pageYOffset || this.document.documentElement.scrollTop;
+
+  //   const content =
+  //     this.el.nativeElement.querySelector('.content');
+
+  //   if (scrollTop > 50) {
+  //     this.renderer.addClass(content, 'scrolled');
+  //   } else {
+  //     this.renderer.removeClass(content, 'scrolled');
+  //   }
+  // }
 
   public onMenuClick() {
     this.sidenavService.open();

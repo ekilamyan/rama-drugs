@@ -7,14 +7,30 @@
 }
 
 /* navbar .content */
+/* navbar default (top of page) */
 .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     height: 100%;
-    max-width: 1200px;
-    margin: auto;
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 10px;
+
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+
+    transition: all 0.3s ease;
+}
+
+/* applied AFTER scrolling */
+.content.scrolled {
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13px);
 }
 
 .logo-container {
@@ -27,7 +43,7 @@
 .image {
     width: auto;
     height: 60px;
-    margin: 10px 0px;
+    margin: 0px;
 }
 
 .title {
@@ -49,41 +65,7 @@
 
     width: 50%;
     margin: 5px 15px 5px 15px;
-
 }
-
-.menu-button {
-    color: white;
-    cursor: pointer;
-    font-size: 30px;
-    height: auto;
-    width: auto;
-}
-
-.search-container {
-    width: 40%;
-}
-
-.option-content {
-    display: flex;
-    align-items: center;
-}
-
-.ticker {
-    display: inline-block;
-    width: 65px;
-    font-weight: 600;
-    padding-right: 10px;
-    white-space: nowrap;
-}
-
-.company-name {
-    flex: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 
 /* button animations */
 .button {
@@ -94,7 +76,7 @@
     cursor: pointer;
     outline: inherit;
     font-size: 15px;
-    color: white;
+    color: black;
     display: inline-block;
     position: relative;
 }
@@ -109,7 +91,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: black;
     transition: transform 0.25s ease-out;
 }
 
