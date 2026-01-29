@@ -1,4 +1,3 @@
-/* navbar */
 .nav-bar-container {
     position: fixed;
     z-index: 1000;
@@ -6,8 +5,7 @@
     top: 0;
 }
 
-/* navbar .content */
-/* navbar default (top of page) */
+/* animate inner content only */
 .content {
     display: flex;
     justify-content: space-between;
@@ -15,7 +13,7 @@
 
     height: 100%;
     max-width: 1300px;
-    margin: 20px auto;
+    margin: 15px auto;
     padding: 10px;
 
     background: transparent;
@@ -23,6 +21,11 @@
     box-shadow: none;
 
     transition: all 0.3s ease;
+
+    /* fade-in animation */
+    animation: navbarFadeIn 1s ease-out 1s forwards;
+    opacity: 0;
+    will-change: opacity, transform;
 }
 
 /* applied AFTER scrolling */
@@ -33,50 +36,36 @@
     backdrop-filter: blur(13px);
 }
 
+
 .logo-container {
     width: 20%;
     display: flex;
     align-items: flex-start;
-    margin: 5px 15px 5px 15px;
+    margin: 5px 15px;
 }
 
 .image {
     width: auto;
     height: 60px;
-    margin: 0px;
 }
 
-.title {
-    font-size: 20px;
-    // font-weight: bold;
-    color: white;
-    justify-content: flex-start;
-    cursor: pointer;
-    margin: 10px;
-}
-
-
-/* buttons */
 .buttons {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 30px;
-
     width: 50%;
-    margin: 5px 15px 5px 15px;
+    margin: 5px 15px;
 }
 
-/* button animations */
 .button {
-    /* remove default button styling */
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
     outline: inherit;
     font-size: 15px;
-    color: black;
+    color: white;
     display: inline-block;
     position: relative;
 }
@@ -84,14 +73,13 @@
 .button::after {
     margin-bottom: -3px;
     content: '';
-    text-decoration: none;
     position: absolute;
     width: 100%;
     transform: scaleX(0);
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: black;
+    background-color: white;
     transition: transform 0.25s ease-out;
 }
 
@@ -107,11 +95,17 @@
     transform-origin: bottom left;
 }
 
-
-.search-button {
-    display: none;
+/* button color change on scroll */
+.content.scrolled .button {
+    color: #1f2937;
+    font-weight: 500;
 }
 
+.content.scrolled .button::after {
+    background-color: #1f2937;
+}
+
+/* menu button */
 .menu-button {
     display: none;
 }
@@ -207,4 +201,15 @@
         display: block;
     }
 
+}
+
+@keyframes navbarFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

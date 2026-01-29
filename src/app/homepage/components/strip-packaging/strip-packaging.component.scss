@@ -12,7 +12,6 @@
     width: 1200px;
     margin: auto;
     padding: 100px 0px;
-
 }
 
 img {
@@ -41,33 +40,26 @@ img {
     }
 
     .learn-more-button {
-        all: unset;
-
         width: 150px;
         padding: 10px;
-
         font-size: 16px;
         font-weight: bold;
         text-align: center;
-
         color: #eb7d32;
+        background-color: transparent;
         border: 2px solid #eb7d32;
         border-radius: 2px;
-
         cursor: pointer;
-
-        /* Smooth animations */
         transition:
             background-color 0.3s ease,
             color 0.3s ease,
             transform 0.2s ease,
             box-shadow 0.2s ease;
-    }
 
-    .learn-more-button:hover {
-        background-color: #eb7d32;
-        color: white;
-        box-shadow: 0 6px 12px rgba(235, 125, 50, 0.3);
+        &:hover {
+            background-color: #eb7d32;
+            color: white;
+            box-shadow: 0 6px 12px rgba(235, 125, 50, 0.3);
+        }
     }
-
 }

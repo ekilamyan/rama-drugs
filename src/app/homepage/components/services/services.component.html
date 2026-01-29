@@ -1,9 +1,10 @@
 <div class="services-container">
-    <div class="content">
-        <div class="services-description-container">
+    <div class="content" #content>
+        <div class="services-description-container animate-on-scroll" [style.--index]="0">
             <h1 class="title">All The Service You Will Get</h1>
-            <p class="description">It's important to address your health conditions during medications for the best
-                substance.</p>
+            <p class="description">
+                It's important to address your health conditions during medications for the best substance.
+            </p>
             <button class="learn-more-button">Contact Us</button>
         </div>
 
@@ -13,7 +14,6 @@
                 <h2 class="additional-service-title">REQUEST REFILL</h2>
                 <p>Let us know if you need a prescription refilled and we will take care of the rest.</p>
             </div>
-        
             <button class="learn-more-button">Request</button>
         </div>
 
@@ -23,41 +23,34 @@
                 <h2 class="additional-service-title">TRANSFER RX</h2>
                 <p>Transfer a prescription from your old pharmacy to RaMa Drugs. All we need is the pharmacy and prescription info.</p>
             </div>
-
             <button class="learn-more-button">Transfer</button>
         </div>
 
-        <div class="service-card animate-on-scroll" [style.--index]="0">
+        <div class="service-card animate-on-scroll" [style.--index]="3">
             <div class="service-content">
                 <mat-icon fontIcon="local_shipping"></mat-icon>
                 <h2 class="additional-service-title">FREE DELIVERY</h2>
                 <p>RaMa Drugs will deliver your prescriptions to your doorstep at no extra charge!.</p>
             </div>
-
             <button class="learn-more-button">Contact Us</button>
         </div>
 
-        <div class="service-card animate-on-scroll" [style.--index]="1">
+        <div class="service-card animate-on-scroll" [style.--index]="4">
             <div class="service-content">
                 <mat-icon fontIcon="health_and_safety"></mat-icon>
                 <h2 class="additional-service-title">ALL OVER-THE-COUNTER NEEDS</h2>
-                <p>Antacids, Antiemetics, Antihistamines, Cough Suppressants, Decongestants, Pain Relievers,
-                    Vitamins And
-                    more...</p>
+                <p>Antacids, Antiemetics, Antihistamines, Cough Suppressants, Decongestants, Pain Relievers, Vitamins And more...</p>
             </div>
-
             <button class="learn-more-button">Contact Us</button>
         </div>
 
-        <div class="service-card animate-on-scroll" [style.--index]="2">
+        <div class="service-card animate-on-scroll" [style.--index]="5">
             <div class="service-content">
                 <mat-icon fontIcon="call"></mat-icon>
                 <h2 class="additional-service-title">ON-CALL PHARMACISTS</h2>
                 <p>RaMa Drugs has dedicated pharmacists on call to answer your questions 24/7</p>
             </div>
-
             <button class="learn-more-button">Contact Us</button>
         </div>
-
     </div>
 </div>

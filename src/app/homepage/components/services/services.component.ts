@@ -1,39 +1,39 @@
+import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
-import { Service } from '../../../shared/models/service';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-services',
-  imports: [
-    MatIcon
-  ],
   templateUrl: './services.component.html',
-  styleUrl: './services.component.scss'
+  styleUrl: './services.component.scss',
+  imports: [MatIcon]
 })
-export class ServicesComponent {
-  public services: Service[] = [];
-  public additionalServices: Service[] = [];
+export class ServicesComponent implements AfterViewInit {
 
-  constructor() { }
+  @ViewChild('content') contentRef!: ElementRef;
 
-  ngOnInit(): void {
-  }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {
-    // Select all animate-on-scroll elements in both containers
-    const allElements = document.querySelectorAll('.animate-on-scroll');
+    if (!isPlatformBrowser(this.platformId)) return;
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('slide-in');
-          observer.unobserve(entry.target); // Only animate once
-        }
-      });
-    }, { threshold: 0.25 });
+    const elements = this.contentRef.nativeElement.querySelectorAll('.animate-on-scroll');
 
-    // Observe each element in both services containers
-    allElements.forEach((el: Element) => observer.observe(el));
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target); // animate once
+          }
+        });
+      },
+      {
+        threshold: 0.5, // animate when 50% visible
+        rootMargin: '0px 0px -10% 0px' // optional
+      }
+    );
+
+    elements.forEach((el: Element) => observer.observe(el));
   }
 }

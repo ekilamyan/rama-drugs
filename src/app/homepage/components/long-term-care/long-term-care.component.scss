@@ -1,6 +1,6 @@
 .strip-packaging-container {
     width: 100%;
-    background-image: linear-gradient(-150deg, #f4805b, #a3543c)
+    background-image: linear-gradient(-150deg, #f4805b, #a3543c);
 }
 
 .content {
@@ -12,7 +12,6 @@
     width: 1200px;
     margin: auto;
     padding: 100px 0px;
-
 }
 
 img {
@@ -41,33 +40,26 @@ img {
     }
 
     .learn-more-button {
-        all: unset;
-
         width: 150px;
         padding: 10px;
-
         font-size: 16px;
         font-weight: bold;
         text-align: center;
-
         color: white;
         border: 2px solid white;
+        background-color: transparent;
         border-radius: 2px;
-
         cursor: pointer;
-
-        /* Smooth animations */
         transition:
             background-color 0.3s ease,
             color 0.3s ease,
             transform 0.2s ease,
             box-shadow 0.2s ease;
-    }
 
-    .learn-more-button:hover {
-        background-color:white;
-        color: #eb7d32;
-        box-shadow: 0 6px 12px rgba(235, 125, 50, 0.3);
+        &:hover {
+            background-color: white;
+            color: #eb7d32;
+            box-shadow: 0 6px 12px rgba(235, 125, 50, 0.3);
+        }
     }
-
 }

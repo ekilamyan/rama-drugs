@@ -24,6 +24,23 @@ html {
   scroll-behavior: smooth;
 }
 
+/* =============================== */
+/* ANIMATION: FADE + MOVE-UP WITH STAGGER */
+/* =============================== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: calc(var(--index) * 0.15s);
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 html,
 body {
   // @include mat.theme((color: (primary: mat.$azure-palette,

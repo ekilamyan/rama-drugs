@@ -1,12 +1,14 @@
 <div class="strip-packaging-container">
-    <div class="content">
+    <div class="content" #content>
         <div class="text">
-            <h1 class="title">Long Term Care</h1>
-            <p class="description">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            <button class="learn-more-button">Learn More</button>
+            <h1 class="title animate-on-scroll" [style.--index]="1">Long Term Care</h1>
+            <p class="description animate-on-scroll" [style.--index]="2">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+            <button class="learn-more-button animate-on-scroll" [style.--index]="3">Learn More</button>
         </div>
-        <img src="https://www.care-one.com/wp-content/uploads/2023/07/long-term-care-split-scaled.jpeg"
-            alt="">
+        <img class="animate-on-scroll" [style.--index]="0"
+            src="https://www.care-one.com/wp-content/uploads/2023/07/long-term-care-split-scaled.jpeg" alt="" />
     </div>
 </div>

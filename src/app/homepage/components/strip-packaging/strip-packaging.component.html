@@ -1,12 +1,16 @@
 <div class="strip-packaging-container">
-    <div class="content">
-        <img src="https://scan-q-002.sitecorecontenthub.cloud/api/public/content/5960ea25152c4f05baa45d93b61e9b5f?v=0ead82d6?h=253&w=250"
-            alt="">
+    <div class="content" #content>
+        <img class="animate-on-scroll" [style.--index]="0"
+             src="https://scan-q-002.sitecorecontenthub.cloud/api/public/content/5960ea25152c4f05baa45d93b61e9b5f?v=0ead82d6?h=253&w=250"
+             alt="">
+
         <div class="text">
-            <h1 class="title">The Benefits of Strip Packaging</h1>
-            <p class="description">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-            <button class="learn-more-button">Learn More</button>
+            <h1 class="title animate-on-scroll" [style.--index]="1">The Benefits of Strip Packaging</h1>
+            <p class="description animate-on-scroll" [style.--index]="2">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+            <button class="learn-more-button animate-on-scroll" [style.--index]="3">Learn More</button>
         </div>
     </div>
 </div>
