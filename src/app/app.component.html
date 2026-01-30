@@ -11,13 +11,13 @@
             </mat-icon>
 
             <ul>
-                <li class="menu-item" [style.--index]="0"><a (click)="scrollToView('about-me')">ABOUT ME</a></li>
+                <li class="menu-item" [style.--index]="0"><a [routerLink]="['/homepage']" (click)="onMenuClick()">HOME</a></li>
                 <hr>
-                <li class="menu-item" [style.--index]="1"><a (click)="scrollToView('services')">SERVICES</a></li>
+                <li class="menu-item" [style.--index]="1"><a [routerLink]="['/refill-rx']" (click)="onMenuClick()">REFILL RX</a></li>
                 <hr>
-                <li class="menu-item" [style.--index]="2"><a (click)="scrollToView('experiences')">EXPERIENCE</a></li>
+                <li class="menu-item" [style.--index]="2"><a [routerLink]="['/transfer-rx']" (click)="onMenuClick()">TRANSFER RX</a></li>
                 <hr>
-                <li class="menu-item" [style.--index]="3"><a (click)="scrollToView('lets-talk')">LET'S TALK!</a></li>
+                <li class="menu-item" [style.--index]="3"><a [routerLink]="['/contact-us']" (click)="onMenuClick()">CONTACT US</a></li>
                 <hr>
             </ul>
             

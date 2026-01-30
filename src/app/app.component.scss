@@ -69,6 +69,13 @@ li {
   animation: slideIn 0.3s ease-out forwards;
 }
 
+/* sidenav styling */
+.side-nav {
+  min-width: 100%; // width of the panel
+  justify-content: center;
+  background-color: black;
+}
+
 .side-nav a {
   background: none;
   border: none;

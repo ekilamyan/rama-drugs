@@ -1,1 +1,114 @@
-<p>transfer-rx works!</p>
+<div class="transfer-container">
+    <div class="content">
+
+        <div class="contact-us">
+
+            <div class="left">
+                <h1 class="title animate-on-scroll" style="--index: 0">
+                    Transfer Request
+                </h1>
+
+                <p class="description animate-on-scroll" style="--index: 1">
+                    Have questions or need assistance? We're here to help—reach out to us anytime and
+                    our team will get back to you as soon as possible. Your feedback and inquiries
+                    matter to us, and we look forward to connecting with you.
+                </p>
+
+                @if(screenWidth > 500) {
+                <div class="contact-methods animate-on-scroll" style="--index: 2">
+                    <div class="data-point">
+                        <mat-icon fontIcon="mail"></mat-icon>
+                        <div class="text">ramadrugs2020&#64;gmail.com</div>
+                    </div>
+
+                    <div class="data-point">
+                        <mat-icon fontIcon="call"></mat-icon>
+                        <div class="text">747.282.1616</div>
+                    </div>
+
+                    <div class="data-point">
+                        <mat-icon fontIcon="print"></mat-icon>
+                        <div class="text">747.282.1600</div>
+                    </div>
+                </div>
+                }
+            </div>
+
+            <div class="contact-information">
+
+                <form class="contact-form" [formGroup]="contactForm">
+
+                    <div class="pairs animate-on-scroll" style="--index: 0">
+                        <div class="name-form-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>First Name</mat-label>
+                                <input matInput formControlName="name" type="text">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="name-form-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Last Name</mat-label>
+                                <input matInput formControlName="lastName" type="text">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="pairs animate-on-scroll" style="--index: 1">
+                        <div class="name-form-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Date of Birth</mat-label>
+                                <input matInput
+                                       [matDatepicker]="dobPicker"
+                                       formControlName="dob">
+                                <mat-datepicker-toggle matIconSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                                <mat-datepicker #dobPicker></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="name-form-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Phone Number</mat-label>
+                                <input matInput formControlName="phone" type="tel">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="pairs animate-on-scroll" style="--index: 2">
+                        <div class="name-form-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Pharmacy Name</mat-label>
+                                <input matInput formControlName="pharmacyName" type="text">
+                            </mat-form-field>
+                        </div>
+
+                        <div class="name-form-field">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Pharmacy Phone</mat-label>
+                                <input matInput formControlName="pharmacyPhone" type="tel">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="form-field animate-on-scroll" style="--index: 3">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Rx #'s or Drug Names</mat-label>
+                            <textarea matInput
+                                      rows="3"
+                                      formControlName="specialInst"></textarea>
+                        </mat-form-field>
+                    </div>
+
+                    <button class="submit-button animate-on-scroll" style="--index: 4">
+                        Transfer
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <app-footer></app-footer>
+</div>

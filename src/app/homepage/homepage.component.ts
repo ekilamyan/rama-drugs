@@ -8,6 +8,7 @@ import { ContactUsComponent } from "../contact-us/contact-us.component";
 import { StripPackagingComponent } from './components/strip-packaging/strip-packaging.component';
 import { LongTermCareComponent } from './components/long-term-care/long-term-care.component';
 import { TeamComponent } from './components/team/team.component';
+import { SideNavService } from '../shared/services/side-nav.service';
 
 @Component({
   selector: 'app-homepage',
@@ -26,7 +27,7 @@ import { TeamComponent } from './components/team/team.component';
   styleUrl: './homepage.component.scss'
 })
 export class HomepageComponent {
-  constructor() { }
+  constructor(private sidenavService: SideNavService,) { }
 
 
   @ViewChild('bgVideo') bgVideo!: ElementRef<HTMLVideoElement>;

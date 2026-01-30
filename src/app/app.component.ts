@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { SideNavService } from './shared/services/side-nav.service';
 import { MatIcon } from '@angular/material/icon';
@@ -9,9 +9,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet, 
-    MatSidenav, 
-    MatSidenavModule, 
+    RouterLink,
+    RouterOutlet,
+    MatSidenav,
+    MatSidenavModule,
     MatIcon,
     NavbarComponent
   ],
@@ -40,5 +41,9 @@ export class AppComponent {
     }
 
     this.sidenavService.close();
+  }
+
+  public onMenuClick() {
+    this.sidenavService.toggle()
   }
 }

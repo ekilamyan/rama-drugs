@@ -4,14 +4,12 @@
         <div class="contact-us">
 
             <div class="left">
-                <h1 class="title">Contact Us</h1>
-                <p class="description">Have questions or need assistance? We're here to help—reach out to us anytime and
-                    our team will get
-                    back to you as soon as possible. Your feedback and inquiries matter to us, and we look forward to
-                    connecting with you.</p>
+                <h1 class="title animate-on-scroll" style="--index: 0">Contact Us</h1>
+                <p class="description animate-on-scroll" style="--index: 1">Have questions or need assistance? We're here to help—reach out to us anytime and
+                    our team will get back to you as soon as possible. Your feedback and inquiries matter to us, and we look forward to connecting with you.</p>
 
-                <div class="contact-methods">
-
+                @if(screenWidth > 500) {
+                <div class="contact-methods animate-on-scroll" style="--index: 2">
                     <div class="data-point">
                         <mat-icon fontIcon="mail"></mat-icon>
                         <div class="text">ramadrugs2020&#64;gmail.com</div>
@@ -26,17 +24,16 @@
                         <mat-icon fontIcon="print"></mat-icon>
                         <div class="text">747.282.1600</div>
                     </div>
-
                 </div>
+                }
 
             </div>
 
             <div class="contact-information">
 
                 <form class="contact-form" [formGroup]="contactForm">
-                    <div class="names">
+                    <div class="pairs animate-on-scroll" style="--index: 3">
                         <div class="name-form-field">
-                            <!-- <span class="label">First Name</span> -->
                             <mat-form-field appearance="outline">
                                 <mat-label>First Name</mat-label>
                                 <input matInput formControlName="name" placeholder="Enter your First Name" type="text">
@@ -44,57 +41,48 @@
                         </div>
 
                         <div class="name-form-field">
-                            <!-- <span class="label">Last Name</span> -->
                             <mat-form-field appearance="outline">
-                                <span class="label"></span>
                                 <mat-label>Last Name</mat-label>
-                                <input matInput formControlName="lastName" placeholder="Enter your Last Name"
-                                    type="text">
+                                <input matInput formControlName="lastName" placeholder="Enter your Last Name" type="text">
                             </mat-form-field>
                         </div>
                     </div>
 
-                    <div class="form-field">
-                        <!-- <span class="label">Email</span> -->
+                    <div class="form-field animate-on-scroll" style="--index: 4">
                         <mat-form-field appearance="outline">
                             <mat-label>Email</mat-label>
-                            <input matInput formControlName="email" placeholder="Enter Your Email" type="text">
+                            <input matInput formControlName="email" placeholder="Enter Your Email" type="email">
                         </mat-form-field>
                     </div>
 
-                    <div class="form-field">
-                        <!-- <span class="label">Subject</span> -->
+                    <div class="form-field animate-on-scroll" style="--index: 5">
                         <mat-form-field appearance="outline">
                             <mat-label>Subject</mat-label>
                             <input matInput formControlName="subject" placeholder="Enter Subject" type="text">
                         </mat-form-field>
                     </div>
 
-                    <div class="form-field">
-                        <!-- <span class="label">Message</span> -->
+                    <div class="form-field animate-on-scroll" style="--index: 6">
                         <mat-form-field appearance="outline">
                             <mat-label>Message</mat-label>
-                            <textarea matInput formControlName="message" placeholder="Enter your First Name"
-                                type="text"></textarea>
+                            <textarea matInput formControlName="message" placeholder="Enter your Message" type="text"></textarea>
                         </mat-form-field>
                     </div>
 
-                    <button class="submit-button">Submit</button>
+                    <button class="submit-button animate-on-scroll" style="--index: 7">Submit</button>
                 </form>
             </div>
 
         </div>
 
         <div class="locations">
-            <h1 class="locations-title">Locations</h1>
+            <h1 class="locations-title animate-on-scroll" style="--index: 3">Locations</h1>
 
             <div class="location-cards">
-
-                <div class="location">
+                <div class="location animate-on-scroll" style="--index: 4">
                     <h2 class="location-title">Glendale</h2>
                     <div class="card">
-                        <img src="https://media.wired.com/photos/5a6a61938c669c70314b300d/3:2/w_2560%2Cc_limit/Google-Map-US_10.jpg"
-                            alt="">
+                        <img src="https://media.wired.com/photos/5a6a61938c669c70314b300d/3:2/w_2560%2Cc_limit/Google-Map-US_10.jpg" alt="">
                         <div class="location-details">
                             <div class="data-point">
                                 <mat-icon fontIcon="call"></mat-icon>
@@ -106,16 +94,14 @@
                             </div>
                         </div>
 
-                        <button class="get-directions-button">Get Directions</button>
+                        <button class="get-directions-button animate-on-scroll" style="--index: 10">Get Directions</button>
                     </div>
                 </div>
 
-
-                <div class="location">
+                <div class="location animate-on-scroll" style="--index: 5">
                     <h2 class="location-title">Burbank</h2>
                     <div class="card">
-                        <img src="https://media.wired.com/photos/5a6a61938c669c70314b300d/3:2/w_2560%2Cc_limit/Google-Map-US_10.jpg"
-                            alt="">
+                        <img src="https://media.wired.com/photos/5a6a61938c669c70314b300d/3:2/w_2560%2Cc_limit/Google-Map-US_10.jpg" alt="">
                         <div class="location-details">
                             <div class="data-point">
                                 <mat-icon fontIcon="call"></mat-icon>
@@ -127,7 +113,7 @@
                             </div>
                         </div>
 
-                        <button class="get-directions-button">Get Directions</button>
+                        <button class="get-directions-button animate-on-scroll" style="--index: 12">Get Directions</button>
                     </div>
                 </div>
             </div>
@@ -135,68 +121,3 @@
 
     </div>
 </div>
-
-<app-footer></app-footer>
-
-
-
-
-<!-- <div class="content-container">
-    <div class="locations">
-        <h1>Locations</h1>
-
-        <div class="location">
-            <img class="map"
-                src="https://media.wired.com/photos/5a6a61938c669c70314b300d/3:2/w_2560%2Cc_limit/Google-Map-US_10.jpg">
-
-        </div>
-
-        <div>
-            <img class="map"
-                src="https://media.wired.com/photos/5a6a61938c669c70314b300d/3:2/w_2560%2Cc_limit/Google-Map-US_10.jpg">
-        </div>
-
-    </div>
-
-
-
-    
-
-
-
-
-    </div>
-</div> -->
-
-<!-- <section class="contact-methods-section">
-    <div class="main-container">
-        <div class="additional-services-container">
-
-            <div class="service-card animate-on-scroll" [style.--index]="0">
-                <div class="service-content">
-                    <mat-icon fontIcon="location_on"></mat-icon>
-                    <h2 class="additional-service-title">ADDRESS</h2>
-                    <p>1022 East Chevy Chase Dr. Ste. D Glendale, CA 91205</p>
-                </div>
-            </div>
-
-
-            <div class="service-card animate-on-scroll" [style.--index]="1">
-                <div class="service-content">
-                    <mat-icon fontIcon="call"></mat-icon>
-                    <h2 class="additional-service-title">PHONE / FAX</h2>
-                    <p>Tel: 747.282.1616</p>
-                    <p>Fax: 747.282.1600</p>
-                </div>
-            </div>
-
-            <div class="service-card animate-on-scroll" [style.--index]="2">
-                <div class="service-content">
-                    <mat-icon fontIcon="mail"></mat-icon>
-                    <h2 class="additional-service-title">EMAIL</h2>
-                    <p>ramadrugs2020&#64;gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->

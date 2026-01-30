@@ -2,33 +2,30 @@
     position: fixed;
     z-index: 1000;
     width: 100%;
+    padding: 0px 10px;
     top: 0;
 }
 
-/* animate inner content only */
+/* inner content */
 .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    height: 100%;
-    max-width: 1300px;
-    margin: 15px auto;
+    max-width: 1200px;
     padding: 10px;
+    margin: 10px auto;
 
     background: transparent;
     backdrop-filter: none;
     box-shadow: none;
 
     transition: all 0.3s ease;
-
-    /* fade-in animation */
     animation: navbarFadeIn 1s ease-out 1s forwards;
     opacity: 0;
-    will-change: opacity, transform;
 }
 
-/* applied AFTER scrolling */
+/* SCROLLED STATE */
 .content.scrolled {
     background: rgba(255, 255, 255, 0.16);
     border-radius: 16px;
@@ -36,50 +33,44 @@
     backdrop-filter: blur(13px);
 }
 
-
-.logo-container {
-    width: 20%;
-    display: flex;
-    align-items: flex-start;
-    margin: 5px 15px;
+/* 🔥 NOT HOMEPAGE STATE */
+.content.not-home .button {
+    color: #1f2937;
+    font-weight: 500;
 }
 
+.content.not-home .button::after {
+    background-color: #1f2937;
+}
+
+/* logo */
 .image {
-    width: auto;
     height: 60px;
 }
 
+/* buttons */
 .buttons {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
     gap: 30px;
-    width: 50%;
-    margin: 5px 15px;
 }
 
 .button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    outline: inherit;
     font-size: 15px;
     color: white;
-    display: inline-block;
     position: relative;
+    cursor: pointer;
 }
 
+/* underline animation */
 .button::after {
-    margin-bottom: -3px;
     content: '';
     position: absolute;
     width: 100%;
-    transform: scaleX(0);
     height: 2px;
     bottom: 0;
     left: 0;
     background-color: white;
+    transform: scaleX(0);
     transition: transform 0.25s ease-out;
 }
 
@@ -87,129 +78,33 @@
     transform: scaleX(1);
 }
 
-.button.underline-animation::after {
-    transform-origin: bottom right;
-}
-
-.button.underline-animation:hover::after {
-    transform-origin: bottom left;
-}
-
-/* button color change on scroll */
+/* scrolled overrides */
 .content.scrolled .button {
     color: #1f2937;
-    font-weight: 500;
 }
 
 .content.scrolled .button::after {
     background-color: #1f2937;
 }
 
-/* menu button */
+/* menu icon */
 .menu-button {
-    display: none;
+    font-size: 30px;
+    color: white;
 }
 
-
-
-/* medium window */
-@media only screen and (min-width: 670px) and (max-width: 1100px) {
-    .mat-sidenav-container {
-        background-size: auto 100vh;
-    }
-
-    .nav-bar-container {
-        padding: 10px 15px;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .logo-container {
-        margin: 0px;
-        width: auto;
-    }
-
-    .image {
-        width: 150px;
-        height: auto;
-    }
-
-    .search-container {
-        width: 65%;
-    }
-
-    /* buttons */
-    .buttons {
-        display: none;
-    }
-
-    .search-button {
-        display: none;
-    }
-
-    .menu-button {
-        font-size: 30px;
-        display: block;
-    }
+.menu-button.scrolled {
+    color: #1f2937;
 }
 
-/* smallest window */
-@media only screen and (max-width: 670px) {
-    .mat-sidenav-container {
-        background-size: auto 100vh;
-    }
-
-    .nav-bar-container {
-        padding: 5px 15px;
-    }
-
-    .logo-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        width: 80%;
-        margin: 0px;
-    }
-
+/* responsive */
+@media (max-width: 670px) {
     .image {
-        width: 150px;
-        height: auto;
-        margin: 5px 0px 5px 0px;
+        height: 40px;
     }
-
-    .search-container {
-        display: none;
-    }
-
-    /* buttons */
-    .buttons {
-        display: none;
-    }
-
-    .search-button {
-        font-size: 25px;
-        display: block;
-    }
-
-    /* menu button */
-    .menu-button {
-        font-size: 25px;
-        display: block;
-    }
-
 }
 
 @keyframes navbarFadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

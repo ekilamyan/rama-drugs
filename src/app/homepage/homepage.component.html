@@ -4,13 +4,6 @@
 
 <!-- All scrollable page content -->
 <div class="homepage-container">
-
-    <!-- old -->
-    <!-- <div class="landing">
-        <app-intro></app-intro>
-    </div> -->
-
-    <!-- New -->
     <div class="landing">
         <video #bgVideo class="landing-video" autoplay muted loop playsinline>
             <source src="/assets/background.mp4" type="video/mp4" />
@@ -23,8 +16,6 @@
         </div>
     </div>
 
-
-
     <mat-icon class="top-of-page-button" #backToTopButton aria-hidden="false" fontIcon="expand_less"
         (click)="ScrollToTop()" matTooltip="Back to top"></mat-icon>
 
@@ -33,7 +24,7 @@
         <app-long-term-care></app-long-term-care>
         <app-services id="services"></app-services>
         <app-team></app-team>
-        <app-footer></app-footer>
+        <!-- <app-footer></app-footer> -->
     </div>
 
 </div>
