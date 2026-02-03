@@ -10,6 +10,11 @@
             <a class="button underline-animation" [routerLink]="['/homepage']">Home</a>
             <a class="button underline-animation" [routerLink]="['/refill-rx']">Refill RX</a>
             <a class="button underline-animation" [routerLink]="['/transfer-rx']">Transfer RX</a>
+            <button class="button underline-animation" [matMenuTriggerFor]="menu">About Us</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item [routerLink]="['/homepage']" (click)="scrollToView('team')">Our Team</button>
+                <button mat-menu-item [routerLink]="['/contact-us']">Locations</button>
+            </mat-menu>
             <a class="button underline-animation" [routerLink]="['/contact-us']">Contact Us</a>
         </div>
         }

@@ -5,10 +5,11 @@ import { SideNavService } from '../shared/services/side-nav.service';
 import { DOCUMENT } from '@angular/common';
 import { filter } from 'rxjs';
 import { ScreenSizeService } from '../shared/services/screen-size-service';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, MatIcon],
+  imports: [RouterLink, MatIcon, MatMenuModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -25,7 +26,7 @@ export class NavbarComponent {
     private router: Router,
     private sidenavService: SideNavService,
     private screenSizeService: ScreenSizeService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     const navBar = this.el.nativeElement.querySelector('.nav-bar-container');
@@ -52,5 +53,14 @@ export class NavbarComponent {
 
   public onMenuClick() {
     this.sidenavService.open();
+  }
+
+  public scrollToView(id: string): void {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    this.sidenavService.close();
   }
 }

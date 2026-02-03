@@ -55,6 +55,16 @@
 }
 
 .button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    cursor: pointer;
+    outline: none;
+
     font-size: 15px;
     color: white;
     position: relative;
@@ -105,6 +115,11 @@
 }
 
 @keyframes navbarFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
